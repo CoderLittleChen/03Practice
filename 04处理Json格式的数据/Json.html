@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://localhost:6947/scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //这里对json数据的格式有要求吗？  必须是  "name"  'name'不行？
+            var data = '{"root":[{"name1":"1","value1":"北京"},{"name2":"2","value2":"天津"}]}';
+            //var data1 = "{name:'1',value:'2'}";
+            var dataObj = $.parseJSON(data);
+            alert(dataObj.root[1].value2);
+            //这里到底怎么解析？
+
+
+            ////对象转json
+            //var data = { "user": [{ "name": "John1", "pwd": "123" }, { "name": "John2", "pwd": "1233" }] };
+            //var json_str = JSON.stringify(data);
+            //alert(json_str);
+
+            ////json字符串转对象
+            //var userObj = '{"user":[{"name":"John","pwd":"123"}]}';
+            //var json = $.parseJSON(userObj);
+            //alert(json.user[0].name);
+
+            //alert('我就测试一下啊');
+
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

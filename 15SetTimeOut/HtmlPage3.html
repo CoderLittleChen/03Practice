@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        //如果在Body中没有img代码，那么二者的执行顺序是一致的，只看代码的先后顺序
+        //如果有img相关的代码，那么window.onload会在ready事件后 等待图片加载完成 执行
+
+
+        //下面这种情况  好像是只根据后面的延迟时间来判断的   延迟时间短的先进入执行队列
+        window.onload = function () {
+            setTimeout(Test3, 200);
+            //alert(2222);
+        }
+
+        $(document).ready(function () {
+            setTimeout(Test1, 300);
+            setTimeout(Test2, 100);
+            //alert(111);
+        });
+
+
+        function Test1() {
+            alert(111);
+        }
+
+        function Test2() {
+            alert(222);
+        }
+
+        function Test3() {
+            alert(333);
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="点我啊" />
+    <img src="#" alt="Alternate Text" />
+</body>
+</html>

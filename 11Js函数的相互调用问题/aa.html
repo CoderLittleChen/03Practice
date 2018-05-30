@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    
+    <!--<script src="1.js"></script>
+    <script src="2.js"></script>-->
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        //这里加入B.js要调用A.js中的文件，那么要满足一下条件
+        //1、保证要调用的js文件都在同一个页面被引用
+        //2、调用的js文件要先于被调用者本身被解释  即A.js文件要在B.js文件之前引用
+        //3、保证被调用的js文件必须是同一字符集下，一个是引用的js文件的编码字符集要一样
+        //     还一个是嵌入HTML的js标签属性charset也要一样
+        //window.onload = function () {
+        //    Test2();
+        //    $('#txt1').val('dsa');
+        //}
+        $(function () {
+            //Test2();
+            $('#txt1').val('dsad');
+            $('#btn').click(function () {
+                //alert('dsad');
+                //$('#txt1').val('dsad');
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" name="name" value="" />
+    <input type="button" id="btn" name="name" value="点我啊" />
+</body>
+</html>

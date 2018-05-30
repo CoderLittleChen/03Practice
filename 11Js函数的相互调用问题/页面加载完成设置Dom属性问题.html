@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="jquery-1.5.2.min.js"></script>
+    <script src="My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$('#txt1').attr("onfocus", 'WdatePicker({dateFmt:"yyyy-MM-dd HH:mm",onpicking:function(dp){$("#txt2").val($(this).val());}})');
+            $('#txt1').attr("onfocus", "");
+            $('#txt1').focus(function () {
+                //WdatePicker({})
+                //WdatePicker({ onpicked: function (dp) { if (!confirm('日期框原来的值为: ' + dp.cal.getDateStr() + ', 要用新选择的值:' + dp.cal.getNewDateStr() + '覆盖吗?')) return true; } })
+                WdatePicker({
+                    dateFmt:"yyyy-MM-dd HH:mm",
+                    onpicked: function (dp) {
+                        $('#txt2').val($(this).val());
+                    }
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" name="name" value="" onfocus='WdatePicker({dateFmt:"yyyy-MM-dd HH:mm"})' />
+    <input type="text" id="txt2" name="name" value="" />
+</body>
+</html>

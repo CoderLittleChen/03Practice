@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btn').click(function () {
+
+                //js中的字符串 索引也是从0 开始
+                //substring() 方法返回的子串包括 start 处的字符，但不包括 stop 处的字符。
+                //相当于从start处开始截取字符串，截取长度为stop 
+
+
+                //拿到text的值  split是分割函数，按照分割符 返回一个数组Array
+                //var txtContent = $('#text').val().split(',');
+                //for (var i = 0; i < txtContent.length; i++) {
+                //    alert(txtContent[i]);
+                //}
+                var str = '我爱北京天安门，天安门上太阳升';
+                str = str.substring(0, 2);
+                //var aa = str.indexOf('爱');
+                //alert(aa);
+                alert(str);
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" name="name" id="text" value="" />
+    <input type="button" name="name" id="btn" value="点我啊" />
+</body>
+</html>

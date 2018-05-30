@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        //Jquery 1.7版本以后   on函数代替bind live   可以为动态增加的元素绑定事件
+        //移除事件处理程序  off方法
+        //添加至运行一次的事件  用one方法
+        $(function () {
+            //点击按钮给div添加元素事件
+            //$('#btn').click(function () {
+            //    //这里的createElement  中的参数tagName  指的的是input  直接填button是不行的
+            //    var btn = document.createElement('input');
+            //    btn.type = "button";
+            //    btn.value = "点我啊啊啊";
+            //    $('#div').append(btn);
+            //})
+
+            //用on方法给div下的input元素绑定click事件
+            //input:not(#btn)    表示给div元素下的所有【id不为btn的input元素】绑定click事件
+            //$('#div').on('click', 'input:not(#btn)', function () {
+            //    alert('dsad');
+            //})
+
+            //$('#id').siblings() 当前元素所有的兄弟节点
+            //$('#id').prev() 当前元素前一个兄弟节点
+            //$('#id').prevaAll() 当前元素之前所有的兄弟节点
+            //$('#id').next() 当前元素之后第一个兄弟节点
+            //$('#id').nextAll() 当前元素之后所有的兄弟节点
+            //$('input:not(#id)')  筛选出input元素中
+            //js中保留几位小数  用to_fixed函数
+
+
+            //获取到当前页面中input元素 type为checkbox  id不为cBox的元素
+            var length = $('input:not(#cBox)[type="checkbox"]').length;
+            alert(length);
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="div">
+        <input id="btn" type="button" name="name" value="点我啊" />
+        <input type="checkbox" id="cBox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" id="cBox" name="name" value="" />
+        <input type="checkbox" id="cBox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+        <input type="checkbox" name="name" value="" />
+    </div>
+</body>
+</html>

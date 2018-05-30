@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var date1 = '2018-03-23 00:01';
+            var date2 = '2018-03-23 14:01';
+            //这里注意C#中截取字符串 第一个参数是其实字符的索引 从0开始，第二个参数是截取多少个字符
+            //js中截取字符串  第一个参数是开始字符的索引（从0开始），第二个参数是截止字符的索引（这里千万要注意不包括该字符）
+            //alert(date1.substring(0,10));
+            //Date.parse()  解析一个日期时间字符串，并返回1970/1/1午夜距离该日期时间的毫秒数
+
+            //这里应该是不足 向上取整
+
+            var time1 = Date.parse(new Date(date1));
+            var time2 = Date.parse(new Date(date2));
+            var days = Math.abs((time1 - time2) / 1000 / 3600 / 24);
+            //var ss = 2.4%1 ;
+            //days= days.toFixed(2);
+            //alert(ss);
+            //alert(days);
+
+            //先判断days是否为小数
+            if (days.toString().indexOf('.') > 0) {
+                //是小数  先拆分
+                days = days.toFixed(2);
+                var arr = days.toString().split('.');
+                alert(arr[0]);
+                var decimal = (days - Number(arr[0])).toFixed(2);
+                alert(decimal);
+                if (decimal<0.5) {
+                    alert(Number(arr[0]) + 0.5);
+                }
+                else {
+                    alert(Number(arr[0]) + 1);
+                }
+            }
+            return days;
+
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

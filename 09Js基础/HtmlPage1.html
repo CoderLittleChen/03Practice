@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="http://localhost:6947/scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            //var str = escape('sadsadsa');
+
+            //这里的encode 编码的是汉字和特殊符号    英文和汉字 不会被编码
+            //
+            var str = encodeURI('http://www.baidu.com?name=张三&num=00！！11az');
+            alert(str);
+            var str1 = decodeURI(str);
+            alert(str1);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

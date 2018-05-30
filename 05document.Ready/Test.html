@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://localhost:6947/scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        //这两个函数本质是一样的，都是Dom元素加载完成后就执行
+        $(document).ready(function () {
+            alert('测试2');
+        })
+        //$(function () {
+        //    alert('测试1  ');                     
+        //})
+        window.onload = function () {
+            alert('测试3');                                                                                                                                                                                                                                                  
+        }
+        //输出结果  3 2 1
+
+        //$(function () {
+        //    setTimeout(Test1, 1000);
+        //    setTimeout(Test2, 5000);
+        //})
+        //function Test1() {
+        //    alert('1');
+        //}
+        //function Test2() {
+        //    alert('2');
+        //}
+    </script>
+</head>
+<body>
+    <input type="text" name="name" value="" />
+</body>
+</html>
