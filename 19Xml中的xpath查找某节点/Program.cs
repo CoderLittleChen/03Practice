@@ -27,17 +27,20 @@ namespace _19Xml中的xpath查找某节点
             //在后面加/@name  表示查询的指定路径节点的指定属性
 
 
-           
+
             //          root//LinixServer                                   返回的是节点
             //          root//LinixServer/@name                       返回的是节点对应的属性对象  需要通过Value字段来获取值
             //          root//LinixServer[@name='CentOS']       返回的是节点
             //          root/Conputer|root/LinixServer               使用|可以获得多重模式的节点
 
             //这里注意  拿到xml节点的属性对象  一定要通过value值来进行输出  
-            XmlNode node = xdoc.SelectSingleNode("root//LinixServer/@name");
-            //然后直接通过node.value 进行输出   这里的node.Value  输出的值是CentOS
-            Console.WriteLine(node.Value);
-            //Console.WriteLine(node.Attributes["price"].Value);
+
+            //我现在想要的效果  通过xPath 拿到product节点下，所有name属性为CentOS的节点
+            XmlNode node = xdoc.SelectSingleNode("//LinuxServer[@name='CentOS']");
+            //xPath 表示筛选出LinixServer下 包含name属性的node节点
+            //然后直接通过node.value 进行输出   这里的node.Value  输出的值是CentOS   
+            Console.WriteLine(node.Attributes["price"].Value);
+            //Console.WriteLine(node.Attributes["price"].Value);  
             Console.ReadKey();
 
         }

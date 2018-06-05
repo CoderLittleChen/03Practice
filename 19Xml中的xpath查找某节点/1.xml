@@ -7,7 +7,7 @@
     </Computer>            
     <MobilePhone name="iPhone" price="6666">
     </MobilePhone>
-    <LinixServer name="CentOS" price="99999">
-    </LinixServer>
+    <LinuxServer name="CentOS" price="99999">
+    </LinuxServer>
   </product>
 </root>
