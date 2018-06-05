@@ -4,7 +4,7 @@
     <Computer name="华硕" price="1000">
       <CPU name="i7">
       </CPU>
-    </Computer>
+    </Computer>            
     <MobilePhone name="iPhone" price="6666">
     </MobilePhone>
     <LinixServer name="CentOS" price="99999">
