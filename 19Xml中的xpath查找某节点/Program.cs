@@ -34,7 +34,7 @@ namespace _19Xml中的xpath查找某节点
             //          root/Conputer|root/LinixServer               使用|可以获得多重模式的节点
 
             //这里注意  拿到xml节点的属性对象  一定要通过value值来进行输出  
-
+            
             //我现在想要的效果  通过xPath 拿到product节点下，所有name属性为CentOS的节点
             XmlNode node = xdoc.SelectSingleNode("//LinuxServer[@name='CentOS']");
             //xPath 表示筛选出LinixServer下 包含name属性的node节点

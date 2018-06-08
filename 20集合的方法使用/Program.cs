@@ -125,7 +125,7 @@ namespace _20集合的方法使用
             };
 
             //查询指定产品下的所有材料
-            //List<Material> materials = products.Find(x => x.Id == 2).Materials.ToList();
+            //List<Material> materials = products.Find(x > x.Id == 2).Materials.ToList();
             //Console.WriteLine(materials[1].MaterialName);
 
             //查询指定产品下  指定材料
@@ -144,10 +144,13 @@ namespace _20集合的方法使用
             //下面这种写法  where方法重载  按照要求 参数是name为string类型，num是int类型，返回值是bool类型 
             //如果返回值为true，则该元素会被添加到IEnumerable集合中
 
-            //这里的num表示list集合中的元素的索引
+            //这里的num表示list集合中的元素的索引  
             //这里的参数 Func<T,bool>  类型，其中T类型取决于list1集合中的对象类型，即=>的前面为参数类型，后面为返回值
 
             //遍历IEnumerable类型对象不能用 索引器的方式
+
+
+            //where（）方法  对应参数是Func(Product,bool)，第一个参数是返回值bool  匿名比倒是
             IEnumerable<Product> list1 = products.Where(pro => pro.Id == 1);
 
             //这里注意
